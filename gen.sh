@@ -2,19 +2,8 @@
 
 root_path=${root_path:-$(dirname $(realpath $0))}
 
-function path_style_win2linux() {
-    local path=${1:-''}
-    echo $path | sed 's#\\#/#g' | sed -E 's#^([a-zA-Z]):#/\L\1#g'
-}
-
-MIND_PLUS_HOME=${MIND_PLUS_HOME:?"请设置环境变量: MIND_PLUS_HOME=C:\Users\用户名\AppData\Local\mind+"}
-MIND_PLUS_HOME=`path_style_win2linux $MIND_PLUS_HOME`
-
-if [[ ! -d $MIND_PLUS_HOME/Arduino/packages/mindplus/tools/gcc-arm-none-eabi/0.0.1/bin ]]; then
-    echo "目录不存在: $MIND_PLUS_HOME"
-    exit 1
-fi
-export PATH=$MIND_PLUS_HOME/Arduino/packages/mindplus/tools/gcc-arm-none-eabi/0.0.1/bin:$PATH
+gcc_arm_none_eabi_home=/c/Users/link/AppData/Local/mind+/Arduino/packages/mindplus/tools/gcc-arm-none-eabi/0.0.1/bin
+export PATH=$gcc_arm_none_eabi_home:$PATH
 
 function gen() {
     local target=$1
