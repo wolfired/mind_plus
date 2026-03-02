@@ -1,0 +1,13 @@
+{
+  "lsp": {
+    "clangd": {
+      "binary": {
+        "path": "C:/Users/link/AppData/Local/Zed/languages/clangd/clangd_21.1.8/bin/clangd.exe",
+        "arguments": [
+          "--query-driver=C:/Users/link/AppData/Local/mind+/Arduino/packages/mindplus/tools/gcc-arm-none-eabi/0.0.1/bin/arm-none-eabi-*",
+          "--compile-commands-dir=C:/Users/link/AppData/Local/mind+/cache/tmp_dev-DFRobot-microbitV2/build",
+        ],
+      },
+    },
+  },
+}
