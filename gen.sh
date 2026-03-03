@@ -13,15 +13,16 @@ function gen() {
     echo
 
     arm-none-eabi-g++ $(< ./parameters/build_args.txt) ./src/${target}.c -o ./build/${target}.o \
-    && echo "成功生成: $target.o"
+    && echo "${root_path}/gen.sh: 成功生成 -> $target.o"
 
     arm-none-eabi-g++ ./build/${target}.o $(< ./parameters/link_args.txt) -Wl,-Map,./build/${target}.map -o ./build/${target}.elf \
-    && echo "成功生成: $target.elf"
+    && echo "${root_path}/gen.sh: 成功生成 -> $target.elf"
 
     arm-none-eabi-objcopy -O ihex ./build/${target}.elf ./build/${target}.hex \
-    && echo "成功生成: $target.hex"
+    && echo "${root_path}/gen.sh: 成功生成 -> $target.hex"
 
     echo
 }
 
-gen main
+gen template
+# gen pathfinding
