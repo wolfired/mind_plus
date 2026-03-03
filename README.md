@@ -9,7 +9,6 @@ Mind+项目模板
 ```bash
 # clangd程序
 # g++程序
-# mind+输出目录
 .zed/settings.json
 
 # git程序
@@ -24,9 +23,9 @@ parameters/build_args
 parameters/link_args
 
 # g++程序
-# mind+输出目录
+# 头文件搜索目录
 .clangd
 
-# gcc工具链目录: gcc_arm_none_eabi_home
+# gcc工具链目录: gcc_arm_none_eabi_bin
 gen.sh
 ```
