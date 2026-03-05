@@ -12,7 +12,7 @@ function gen() {
 
     echo
 
-    arm-none-eabi-g++ $(< ./parameters/build_args.txt) ./src/${target}.c -o ./build/${target}.o \
+    arm-none-eabi-g++ $(< ./parameters/build_args.txt) ./src/${target}.cc -o ./build/${target}.o \
     && echo "${root_path}/gen.sh: 成功生成 -> $target.o"
 
     arm-none-eabi-g++ ./build/${target}.o $(< ./parameters/link_args.txt) -Wl,-Map,./build/${target}.map -o ./build/${target}.elf \
