@@ -6,6 +6,7 @@ CompileFlags:
   Compiler: C:/Users/link/AppData/Local/mind+/Arduino/packages/mindplus/tools/gcc-arm-none-eabi/0.0.1/bin/arm-none-eabi-g++
   Add:
     [
+      "-xc++",
       "-mcpu=cortex-m4",
       "-Wno-expansion-to-defined",
       "-mthumb",
